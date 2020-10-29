@@ -1,0 +1,36 @@
+.section-title {
+    font-size: 46px;
+    font-family: openSansBold;
+    color: $clr2;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-sub-title {
+    margin-bottom: 70px;
+    padding: 0 10px;
+    text-align: center;
+
+    a {
+        font-family: openSansBold;
+        color: $clr2;
+    }
+}
+
+.recent-break {
+    height: 35px;
+}
+
+.about-break {
+    height: 100px;
+}
+
+.contact-break {
+    height: 90px;
+}
+
+@media (max-width: 900px) {
+    .section-sub-title {
+        margin-bottom: 30px;
+    }
+}

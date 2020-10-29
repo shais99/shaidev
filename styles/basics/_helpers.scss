@@ -1,0 +1,144 @@
+/* List Helpers */
+
+.clean-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Flex Helpers */
+
+.flex {
+    display: flex;
+    &.align-center {
+        align-items: center;
+    }
+    &.align-baseline {
+        align-items: baseline;
+    }
+    &.column {
+        flex-direction: column;
+    }
+    &.justify-center {
+        justify-content: center;
+    }
+    &.justify-start {
+        justify-content: flex-start;
+    }
+    &.space-between {
+        justify-content: space-between;
+    }
+    &.space-evenly {
+        justify-content: space-evenly;
+    }
+    &.space-around {
+        justify-content: space-around;
+    }
+    &.wrap {
+        flex-wrap: wrap;
+    }
+    &.align-start {
+        align-items: flex-start;
+    }
+    &.align-baseline {
+        align-items: baseline;
+    }
+    &.align-end {
+        align-items: flex-end;
+    }
+    &.even {
+        justify-content: space-evenly;
+    }
+    &.justify-end {
+        justify-content: flex-end;
+    }
+    &.row-reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+.bold {
+    font-family: openSansBold;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.t-right {
+    text-align: right !important;
+}
+
+/* Utils */
+
+.delete-container {
+    background-color: $clr7;
+    border: 1px solid darken($clr6, 8);
+    padding: 10px 30px;
+    position: absolute;
+
+    .delete-title {
+        margin-bottom: 7px;
+    }
+
+    .btn {
+        font-size: rem(14px);
+        padding: 6px 12px;
+    }
+
+    &.customer-close-user {
+        right: 32%;
+        margin-top: 10px;
+    }
+}
+
+/* Margin Helpers */
+
+.mr-5 {
+    margin-right: 5px;
+}
+.ml-5 {
+    margin-left: 5px;
+}
+.mb-5 {
+    margin-bottom: 5px;
+}
+.mt-5 {
+    margin-top: 5px;
+}
+.ml-10 {
+    margin-left: 10px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.not-found {
+    font-size: rem(24px);
+    font-family: openSansBold;
+    margin: 10px 0;
+}
+
+.red {
+    color: $clr4;
+}
+.green {
+    color: darken($clr5, 22);
+}
+
+input[name="emailAddress"],
+input[name="userEmailAddress"],
+input[name="password"] {
+    text-align: left;
+
+    &::placeholder {
+        text-align: right;
+    }
+}
+
+.long-txt {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 120px;
+    white-space: nowrap;
+}

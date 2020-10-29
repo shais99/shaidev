@@ -1,0 +1,22 @@
+:global {
+    // Setup
+    @import "setup/variables.scss";
+    @import "setup/functions.scss";
+    @import "setup/typography.scss";
+
+    // Basics
+    @import "basics/helpers.scss";
+    @import "basics/layout.scss";
+    @import "basics/base.scss";
+    @import "basics/links.scss";
+    @import "basics/buttons.scss";
+
+    // Components
+    @import "cmps/Navbar.scss";
+    @import "cmps/Section.scss";
+    @import "cmps/Hero.scss";
+    @import "cmps/RecentWork.scss";
+    @import "cmps/AboutMe.scss";
+    @import "cmps/ContactMe.scss";
+    @import "cmps/Footer.scss";
+}

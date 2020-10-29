@@ -4,12 +4,21 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start"
   },
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "axios": "^0.21.0",
     "next": "9.5.3",
+    "next-fonts": "^1.4.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-in-viewport": "^1.0.0-alpha.15",
+    "sass": "^1.26.12",
+    "sass-loader": "^10.0.2"
+  },
+  "devDependencies": {
+    "sass-resources-loader": "^2.1.1"
   }
 }

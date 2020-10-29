@@ -1,0 +1,55 @@
+.main-footer {
+    background-color: $clr2;
+    padding-top: 125px;
+
+    .logo {
+        max-width: 60px;
+        cursor: pointer;
+        margin-bottom: 50px;
+    }
+
+    .footer-title {
+        font-family: openSansLight;
+        color: $clr7;
+        font-size: rem(32px);
+        max-width: 470px;
+        text-align: center;
+        margin-bottom: 100px;
+        padding: 0 10px;
+    }
+
+    .social-container {
+        margin-bottom: 125px;
+        
+        a {
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            transition: 0.3s;
+            margin: 0 10px;
+
+            img {
+                width: 20px;
+            }
+
+            &:hover {
+                background-color: $clr7;
+                border: 1px solid $clr7;
+            }
+        }
+
+        a:hover img {
+            filter: invert(52%) sepia(72%) saturate(1321%) hue-rotate(178deg) brightness(91%) contrast(88%);
+        }
+    }
+
+    .copy-rights {
+        background-color: $clr3;
+        width: 100%;
+        text-align: center;
+        color: $clr7;
+        padding: 18px;
+        font-size: rem(13px);
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+    }
+}

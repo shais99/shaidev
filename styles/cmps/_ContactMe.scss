@@ -1,0 +1,119 @@
+.contact-me {
+    padding: 35px;
+
+    .msg-container {
+        font-family: openSansBold;
+        height: 20px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        margin-bottom: 15px;
+        text-align: center;
+
+        &.success {
+            color: darken($clr5, 15);
+        }
+        &.danger {
+            color: darken($clr4, 15);
+        }
+    }
+
+    .section-sub-title {
+        margin-bottom: 40px;
+    }
+
+    .contact-form {
+        width: 50%;
+
+        span {
+            color: #6f6f6f;
+        }
+
+        .name-email {
+            margin-bottom: 20px;
+
+            label {
+                &:not(:first-of-type) {
+                    margin-inline-start: 50px;
+                }
+                span {
+                    margin-bottom: 10px;
+                }
+
+                input {
+                    border: 1px solid darken($clr6, 10);
+                    border-radius: 10px;
+                    padding: 15px 10px;
+                    width: 300px;
+                }
+            }
+        }
+
+        .message {
+            margin-bottom: 15px;
+
+            label {
+                span {
+                    margin-bottom: 10px;
+                }
+
+                textarea {
+                    border: 1px solid darken($clr6, 10);
+                    border-radius: 10px;
+                    resize: none;
+                    width: 650px;
+                    height: 170px;
+                    padding: 15px;
+                    font-family: openSans;
+                }
+            }
+        }
+
+        .contact-btn {
+            box-shadow: unset;
+            border: unset;
+            text-transform: unset;
+            font-size: rem(20px);
+            padding: 12px 30px;
+            margin-top: 15px;
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    .contact-me {
+        .contact-form {
+            width: unset;
+            min-width: 90vw;
+            max-width: 95vw;
+
+            .name-email {
+                flex-wrap: wrap;
+                width: 100%;
+
+                label {
+                    width: 100%;
+
+                    input {
+                        width: 100%;
+                    }
+                    &:not(:first-of-type) {
+                        margin: 0;
+                    }
+                    &:first-of-type {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            .message {
+                width: 100%;
+                label {
+                    textarea {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

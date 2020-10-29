@@ -1,65 +1,41 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import '../styles/global.scss'
+import Navbar from '../cmps/Navbar'
+import Hero from '../cmps/Hero'
+import RecentWork from '../cmps/RecentWork'
+import AboutMe from '../cmps/AboutMe'
+import ContactMe from '../cmps/ContactMe'
+import Footer from '../cmps/Footer'
+import handleViewport from 'react-in-viewport';
+const RecentWorkBlock = handleViewport(RecentWork);
+const AboutMeBlock = handleViewport(AboutMe);
+const ContactMeBlock = handleViewport(ContactMe);
+const HeroBlock = handleViewport(Hero);
 
-export default function Home() {
+const Home = () => {
+  const saveViewPort = (viewport) => {
+    localStorage.setItem('viewport', viewport)
+  }
+
   return (
-    <div className={styles.container}>
+    <main className="web-main-container">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>SHAIDEV | Full Stack Developer</title>
+        <link rel="icon" href="/assets/img/favicon.ico" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+      <Navbar />
+      <HeroBlock onEnterViewport={() => saveViewPort('')} />
+      <div id="projects" className="recent-break"></div>
+      <RecentWorkBlock onEnterViewport={() => saveViewPort('projects')} />
+      <div id="about-me" className="about-break"></div>
+      <AboutMeBlock onEnterViewport={() => saveViewPort('about-me')} />
+      <div id="contact-me" className="contact-break"></div>
+      <ContactMeBlock onEnterViewport={() => saveViewPort('contact-me')} />
+      <Footer />
+    </main>
   )
 }
+
+export default Home;
